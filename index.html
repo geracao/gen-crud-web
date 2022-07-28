@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- add favicon -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./scripts.js"></script>
+    <title>crud-gen</title>
+  </head>
+  <body style="background-color: #ccc">
+    <header style="background-color: #ffa1a1;">header</header>
+
+    <main>
+      <section>
+        <div class="container">
+          <table style="border: 1px solid red;">
+            <div><!-- Caption fica uma merda -->
+              <h1>Gen <b>Members</b></h1>
+              <div class="container-buttons">
+                <form>
+                  <input type="text" />
+                  <button class="search"><!-- lupa icon --></button>
+                </form>
+                <button class="delete">
+                  Delete
+                  <!-- delete icon -->
+                </button>
+                <button class="add">
+                  Add New Member
+                  <!-- add icon -->
+                </button>
+              </div>
+            </div>
+            <thead>
+              <tr>
+                <th><input type="checkbox" /></th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>GitHub</th>
+                <th>Phone</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>marcelo</td>
+                <td>marcelinda21@mail.com</td>
+                <td>github.com&#47;marcelindao</td>
+                <td>(11) 555-2222</td>
+                <td>icon edit icon del</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>total:</td>
+                <td>99999</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+    </main>
+    <footer style="background-color: #ffa1a1;">footer</footer>
+  </body>
+</html>
