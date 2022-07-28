@@ -1,6 +1,6 @@
 body {
-  background-color: #1e1e1e;
-  color: white;
+  background-color: #ffffff;
+  color: black;
 }
 
 /* header */
@@ -25,10 +25,11 @@ main {
 }
 
 section {
-  background-color: #652c80;
+  background-color: #CEDEF2;
   border-radius: 20px;
-  width: 100rem;
-  height: 800px;
+  width: 80%;
+  height: 80%;
+  border: 2px solid #000000;
 }
 
 .container {
@@ -44,6 +45,7 @@ section {
   align-items: center;
   height: 15%;
   padding: 20px;
+  background-color: #2f4661;
 }
 
 .container-header-buttons {
