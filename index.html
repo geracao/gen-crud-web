@@ -11,29 +11,29 @@
     <title>crud-gen</title>
   </head>
   <body>
-    <header style="background-color: #ffa1a1;">header</header>
+    <header style="background-color: #ffa1a1">header</header>
 
     <main>
       <section>
         <div class="container">
-          <table style="border: 1px solid red;">
-            <div><!-- Caption fica uma merda -->
-              <h1>Gen <b>Members</b></h1>
-              <div class="container-buttons">
-                <form>
-                  <input type="text" />
-                  <button class="search"><!-- lupa icon --></button>
-                </form>
-                <button class="delete">
-                  Delete
-                  <!-- delete icon -->
-                </button>
-                <button class="add">
-                  Add New Member
-                  <!-- add icon -->
-                </button>
-              </div>
+          <div class="container-header">
+            <h1>Gen <b>Members</b></h1>
+            <div class="container-header-buttons">
+              <form>
+                <input type="text" />
+                <button class="search">lupa<!-- lupa icon --></button>
+              </form>
+              <button class="delete">
+                Delete
+                <!-- delete icon -->
+              </button>
+              <button class="add">
+                Add New Member
+                <!-- add icon -->
+              </button>
             </div>
+          </div>
+          <table class="container-body" style="border: 1px solid red">
             <thead>
               <tr>
                 <th><input type="checkbox" /></th>
@@ -53,6 +53,7 @@
                 <td>(11) 555-2222</td>
                 <td>icon edit icon del</td>
               </tr>
+              
             </tbody>
             <tfoot>
               <tr>
@@ -64,6 +65,6 @@
         </div>
       </section>
     </main>
-    <footer style="background-color: #ffa1a1;">footer</footer>
+    <footer style="background-color: #ffa1a1">footer</footer>
   </body>
 </html>
