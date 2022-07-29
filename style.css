@@ -1,16 +1,18 @@
 body {
-  background-color: #ffffff;
   color: black;
 }
 
 /* header */
 header {
+  background-color: aqua;
   position: fixed;
   top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
+  height: 50px;
+  border:1px solid #000000;
 }
 
 /* main */
@@ -58,20 +60,39 @@ section {
 
 .container-body {
   height: 100%;
+
+  display: grid;
+  grid-template-areas: 
+  "thead"
+  "tbody"
+  "tfoot";
+
+  grid-template-rows: 50px 1fr 50px;
 }
 
-.Topicos-Container
-{
-    position: absolute;
+thead{
+  grid-area: thead;
+  border-bottom: 1px solid #000000;
+}
 
+tbody{
+  grid-area: tbody;
+  border-bottom: 1px solid #000000;
+}
+
+tfoot{
+  grid-area: tfoot;
 }
 
 /* footer */
 footer {
+  background-color: aqua;
   position: fixed;
   bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
+  height: 50px;
+  border:1px solid #000000;
 }
