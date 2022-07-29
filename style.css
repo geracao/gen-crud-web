@@ -73,6 +73,37 @@ section {
   gap: 20px;
 }
 
+.container-header-buttons > form{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 38px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+
+.container-header-buttons > form input {
+  border-style: none;
+  outline-style: none;
+  background: transparent;
+
+  position: absolute;
+  left: 0;
+  width: 80%;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.container-header-buttons > form button {
+  position: absolute;
+  right: 10px;
+}
+
+
 .container-body {
   padding: 20px;
   height: 100%;
