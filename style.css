@@ -45,6 +45,7 @@ section {
   align-items: center;
   height: 15%;
   padding: 20px;
+  border-radius: 17px 17px 0 0;
   background-color: #2f4661;
 }
 
