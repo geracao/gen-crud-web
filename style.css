@@ -1,10 +1,20 @@
+
+:root {
+  --bg-p-diff: #593954;
+  --bg-p-100: #038c8c;
+  --bg-p-300: #038c7f;
+  --bg-p-500: #026873;
+  --bg-p-700: #013440;
+}
+
 body {
+  background-color: var(--bg-p-500);
   color: black;
 }
 
 /* header */
 header {
-  background-color: aqua;
+  background-color: var(--bg-p-100);
   position: fixed;
   top: 0;
   display: flex;
@@ -15,7 +25,7 @@ header {
   border:1px solid #000000;
 }
 
-/* main */
+/* centering */
 main {
   position: fixed;
   display: flex;
@@ -27,11 +37,12 @@ main {
 }
 
 section {
-  background-color: #CEDEF2;
+  background-color: var(--bg-p-100);
+  box-shadow: 0px 0px 150px 35px var(--bg-p-diff);
   border-radius: 20px;
   width: 80%;
   height: 80%;
-  border: 2px solid #000000;
+  border: 2px solid rgba(0, 0, 0, 0.7);
 }
 
 .container {
@@ -41,24 +52,111 @@ section {
   height: 100%;
 }
 
+/* container header */
+
 .container-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 15%;
   padding: 20px;
+  border-bottom: 2px solid #000;
   border-radius: 17px 17px 0 0;
-  background-color: #2f4661;
+  background: linear-gradient(var(--bg-p-700), var(--bg-100));
+}
+
+.container-header h1 {
+  font-weight: 500;
+  font-size: 2rem;
 }
 
 .container-header-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 550px;
+  width: 80%;
   gap: 20px;
 }
 
-.container-body {
+.button {
+  cursor: pointer;
+  border-style: none;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2%;
+  align-items: center;
+  
+  height: 40px;
+  border-radius: 10px;
+  color: white;
+}
+
+  /* add hover */
+
+.delete {
+  width: 35%;
+  background: #ed5041;
+  border: 1px solid #8f1426;
+}
+
+.add {
+  width: 60%;
+  background: #25aa3f;
+  border: 1px solid #08661a;
+}
+
+.container-header-buttons > form{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 38px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+
+.container-header-buttons > form input {
+  border-style: none;
+  outline-style: none;
+  background: transparent;
+
+  position: absolute;
+  left: 0;
+  width: 90%;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.container-header-buttons > form button {
+  background: transparent;
+  outline-style: none;
+  border-style: none;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+}
+
+/* Container Body */
+
+.fa-trash {
+  color: #ed5041;
+}
+
+.fa-pen {
+  color: #ffbf21;
+}
+
+.table {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   height: 100%;
 
   display: grid;
@@ -86,7 +184,7 @@ tfoot{
 
 /* footer */
 footer {
-  background-color: aqua;
+  background-color: var(--bg-p-100);
   position: fixed;
   bottom: 0;
   display: flex;
