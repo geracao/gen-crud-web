@@ -1,7 +1,7 @@
 :root {
   --bg-diff: #593954;
-  --bg-100: #038C8C;
-  --bg-300: #038C7F;
+  --bg-100: #038c8c;
+  --bg-300: #038c7f;
   --bg-500: #026873;
   --bg-700: #013440;
 }
@@ -35,7 +35,7 @@ main {
 
 section {
   background-color: var(--bg-100);
-  box-shadow: 1px 0px 100px .5px var(--bg-diff);
+  box-shadow: 0px 0px 150px 35px var(--bg-diff);
   border-radius: 20px;
   width: 80%;
   height: 80%;
@@ -60,6 +60,10 @@ section {
   background: linear-gradient(var(--bg-700), var(--bg-100));
 }
 
+.container-header h1 {
+  font-weight: 500;
+  font-size: 2rem;
+}
 
 .container-header-buttons {
   display: flex;
@@ -72,7 +76,6 @@ section {
   padding: 20px;
   height: 100%;
 }
-
 
 /* footer */
 footer {
