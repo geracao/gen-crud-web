@@ -1,10 +1,19 @@
+:root {
+  --bg-diff: #593954;
+  --bg-100: #038C8C;
+  --bg-300: #038C7F;
+  --bg-500: #026873;
+  --bg-700: #013440;
+}
+
 body {
-  background-color: #ffffff;
+  background-color: var(--bg-500);
   color: black;
 }
 
 /* header */
 header {
+  background-color: var(--bg-100);
   position: fixed;
   top: 0;
   display: flex;
@@ -25,11 +34,12 @@ main {
 }
 
 section {
-  background-color: #CEDEF2;
+  background-color: var(--bg-100);
+  box-shadow: 1px 0px 100px .5px var(--bg-diff);
   border-radius: 20px;
   width: 80%;
   height: 80%;
-  border: 2px solid #000000;
+  border: 2px solid rgba(0, 0, 0, 0.7);
 }
 
 .container {
@@ -45,9 +55,11 @@ section {
   align-items: center;
   height: 15%;
   padding: 20px;
+  border-bottom: 2px solid #000;
   border-radius: 17px 17px 0 0;
-  background-color: #2f4661;
+  background: linear-gradient(var(--bg-700), var(--bg-100));
 }
+
 
 .container-header-buttons {
   display: flex;
@@ -57,6 +69,7 @@ section {
 }
 
 .container-body {
+  padding: 20px;
   height: 100%;
 }
 
@@ -68,6 +81,7 @@ section {
 
 /* footer */
 footer {
+  background-color: var(--bg-100);
   position: fixed;
   bottom: 0;
   display: flex;
