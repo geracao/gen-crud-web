@@ -1,5 +1,5 @@
 body {
-  background-color: #ffffff;
+  background:linear-gradient(red, yellow);
   color: black;
 }
 
@@ -58,12 +58,28 @@ section {
 
 .container-body {
   height: 100%;
+
+  display: grid;
+  grid-template-areas: 
+  "thead"
+  "tbody"
+  "tfoot";
+
+  grid-template-rows: 50px 1fr 50px;
 }
 
-.Topicos-Container
-{
-    position: absolute;
+thead{
+  grid-area: thead;
+  border-bottom: 1px solid #000000;
+}
 
+tbody{
+  grid-area: tbody;
+  border-bottom: 1px solid #000000;
+}
+
+tfoot{
+  grid-area: tfoot;
 }
 
 /* footer */
