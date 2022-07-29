@@ -100,7 +100,7 @@ section {
 }
 
 .add {
-  width: 50%;
+  width: 60%;
   background: #25aa3f;
   border: 1px solid #08661a;
 }
@@ -149,9 +149,57 @@ section {
   color: #ffbf21;
 }
 
-.container-body {
+.table {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   height: 100%;
+}
+
+.table-head {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.table-head-tr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 23px;
+  width: 100%;
+}
+
+.head-checkbox {
+  margin-left: 20px;
+}
+
+.body-checkbox {
+  position: absolute;
+  left: 2px;
+  margin-left: 20px;
+}
+
+.table-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.table-body tr {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 
 /* footer */

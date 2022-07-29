@@ -25,7 +25,9 @@
             <div class="container-header-buttons">
               <form>
                 <input type="text" />
-                <button class="search"><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
+                <button class="search">
+                  <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                </button>
               </form>
               <button class="button delete">
                 DELETE
@@ -37,10 +39,10 @@
               </button>
             </div>
           </div>
-          <table class="container-body">
-            <thead>
-              <tr>
-                <th><input  type="checkbox" /></th>
+          <table class="table">
+            <thead class="table-head">
+              <th><input class="head-checkbox" type="checkbox" /></th>
+              <tr class="table-head-tr">
                 <th>Name</th>
                 <th>Email</th>
                 <th>GitHub</th>
@@ -48,9 +50,9 @@
                 <th>Actions</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody class="table-body">
               <tr>
-                <td><input type="checkbox" /></td>
+                <td class="body-checkbox"><input type="checkbox" /></td>
                 <td>marcelo</td>
                 <td>marcelinda21@mail.com</td>
                 <td>github.com&#47;marcelindao</td>
@@ -60,7 +62,39 @@
                   <i class="fa-solid fa-trash"></i>
                 </td>
               </tr>
-              
+              <tr>
+                <td class="body-checkbox"><input type="checkbox" /></td>
+                <td>thiago</td>
+                <td>thiago@mail.com</td>
+                <td>github.com&#47;thiago</td>
+                <td>(11) 99999-1111</td>
+                <td>
+                  <i class="fa-solid fa-pen"></i>
+                  <i class="fa-solid fa-trash"></i>
+                </td>
+              </tr>
+              <tr>
+                <td class="body-checkbox"><input type="checkbox" /></td>
+                <td>marcelo</td>
+                <td>marcelinda21@mail.com</td>
+                <td>github.com&#47;marcelindao</td>
+                <td>(11) 555-2222</td>
+                <td>
+                  <i class="fa-solid fa-pen"></i>
+                  <i class="fa-solid fa-trash"></i>
+                </td>
+              </tr>
+              <tr>
+                <td class="body-checkbox"><input type="checkbox" /></td>
+                <td>marcelo</td>
+                <td>marcelinda21@mail.com</td>
+                <td>github.com&#47;marcelindao</td>
+                <td>(11) 555-2222</td>
+                <td>
+                  <i class="fa-solid fa-pen"></i>
+                  <i class="fa-solid fa-trash"></i>
+                </td>
+              </tr>
             </tbody>
             <tfoot>
               <tr>
