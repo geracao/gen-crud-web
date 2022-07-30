@@ -43,7 +43,7 @@ main {
 }
 
 section {
-  background: linear-gradient(to right, var(--bg-p-100), var(--bg-p-300));
+  background: var(--bg-p-100);
   box-shadow: 0px 0px 100px 1px var(--bg-p-100);
   border-radius: 20px;
   width: 80%;
