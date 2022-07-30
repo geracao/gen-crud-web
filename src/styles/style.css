@@ -1,14 +1,16 @@
 :root {
-  --bg-p-diff: #593954;
-  --bg-p-100: #038c8c;
-  --bg-p-300: #038c7f;
-  --bg-p-500: #026873;
-  --bg-p-700: #013440;
+  /* --bg-p-diff: #593954; */
+  /* --bg-p-100: #038c8c; */
+  --bg-p-100: hsl(220, 70%, 60%);
+  --bg-p-300: hsl(250, 50%, 55%);
+  --bg-p-500: hsl(235, 50%, 30%);;
+  /* --bg-p-700: #013440; */
 }
 
 body {
-  background-color: var(--bg-p-500);
-  color: black;
+  
+  background-color:  var(--bg-p-500);
+  color: #000;
 }
 
 a {
@@ -18,7 +20,7 @@ a {
 
 /* header */
 header {
-  background-color: var(--bg-p-100);
+  background: linear-gradient(to right, var(--bg-p-100), var(--bg-p-300));
   position: fixed;
   top: 0;
   display: flex;
@@ -41,8 +43,8 @@ main {
 }
 
 section {
-  background-color: var(--bg-p-100);
-  box-shadow: 0px 0px 150px 35px var(--bg-p-diff);
+  background: linear-gradient(to right, var(--bg-p-100), var(--bg-p-300));
+  box-shadow: 0px 0px 100px 1px var(--bg-p-100);
   border-radius: 20px;
   width: 80%;
   height: 80%;
@@ -188,7 +190,7 @@ tfoot{
 
 /* footer */
 footer {
-  background-color: var(--bg-p-100);
+  background: linear-gradient(to right, var(--bg-p-100), var(--bg-p-300));
   position: fixed;
   bottom: 0;
   display: flex;
@@ -203,7 +205,8 @@ footer {
 
 .social-links {
   position: relative;
-  background: var(--bg-p-500);
+  background: var(--bg-p-100);
+  background: linear-gradient(to bottom, var(--bg-p-100), var(--bg-p-500));
   width: 50px;
   padding: 3px;
   height: 42px;
@@ -232,6 +235,7 @@ footer {
   transition-timing-function: ease-out;
   border-radius: 20px;
   height: 200px;
+  border: 1px solid var(--bg-p-500);
 }
 
 .social-links a, .social-links i  {
@@ -257,6 +261,7 @@ footer {
 
 .social-links:hover a, .social-links:hover i{
   transition: opacity 1s, display 1s, visibility 1s;
+  
   opacity: 1;
   display: block;
   visibility: visible;
