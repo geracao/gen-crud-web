@@ -151,14 +151,9 @@ section {
   color: #ffbf21;
 }
 
-.table {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+.container-body {
   height: 100%;
-
+  
   display: grid;
   grid-template-areas: 
   "thead"
@@ -166,20 +161,25 @@ section {
   "tfoot";
 
   grid-template-rows: 50px 1fr 50px;
-}
+} 
 
 thead{
   grid-area: thead;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #000;
+}
+
+.topicos-container{
+  display: flex;
 }
 
 tbody{
   grid-area: tbody;
-  border-bottom: 1px solid #000000;
+  flex-grow: 1;
 }
 
 tfoot{
   grid-area: tfoot;
+  border-top: 1px solid #000;
 }
 
 /* footer */
