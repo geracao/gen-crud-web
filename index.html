@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="shortcut icon" href="./src/assets/favicon.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./src/assets/favicon.png"
+      type="image/x-icon"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/styles/reset.css" />
     <link rel="stylesheet" href="./src/styles/style.css" />
@@ -15,6 +19,45 @@
     <title>Gen Members</title>
   </head>
   <body>
+    <div class="modal">
+      <div class="modal-content modal-content-delete">
+        <h1>Deletar Membro</h1>
+        <button class="x-close" onclick="cancelar(event)">
+          <i class="fa-solid fa-xmark fa-xl"></i>
+        </button>
+        <hr />
+        <span>Você tem certeza que deseja deletar esse(s) membro(s)?</span>
+        <br />
+        <small>Essa ação não poderá ser revertida.</small> <br />
+        <form>
+          <div>
+            <button onclick="cancelar(event)">Cancel</button>
+            <hr />
+            <button class="delete">Delete</button>
+          </div>
+        </form>
+      </div>
+      <div class="modal-content modal-content-add">
+        <h1>Adicionar Membro</h1>
+        <button class="x-close" onclick="cancelar(event)">
+          <i class="fa-solid fa-xmark fa-xl"></i>
+        </button>
+        <hr />
+        <form>
+          <label for="name">nome</label>
+          <input type="text" name="name" id="name" />
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email" />
+          <label for="phone">GitHub</label>
+          <input type="text" name="phone" id="phone" />
+          <div>
+            <button onclick="cancelar(event)">Cancel</button>
+            <hr />
+            <button class="add">Adicionar</button>
+          </div>
+        </form>
+      </div>
+    </div>
     <header><h2>Registro de Membros</h2></header>
     <main>
       <section>
@@ -41,7 +84,7 @@
           <table class="container-body">
             <thead>
               <tr class="topicos-container">
-                <th><input  type="checkbox" /></th>
+                <th><input type="checkbox" /></th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>GitHub</th>
@@ -96,9 +139,17 @@
     </main>
     <footer>
       <div class="social-links">
-        <a target="_blank" href="https://www.linkedin.com/in/thiagodepaulasouza/"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
-        <a target="_blank" href="https://www.instagram.com/salequi_lapua/"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-        <a target="_blank" href="https://github.com/thiagodepaulasouza"><i class="fa-brands fa-github fa-2xl"></i></a>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/thiagodepaulasouza/"
+          ><i class="fa-brands fa-linkedin fa-2xl"></i
+        ></a>
+        <a target="_blank" href="https://www.instagram.com/salequi_lapua/"
+          ><i class="fa-brands fa-instagram fa-2xl"></i
+        ></a>
+        <a target="_blank" href="https://github.com/thiagodepaulasouza"
+          ><i class="fa-brands fa-github fa-2xl"></i
+        ></a>
         <a class="" href="#">.</a>
         <img
           src="https://github.com/thiagodepaulasouza.png"
@@ -106,9 +157,17 @@
         />
       </div>
       <div class="social-links">
-        <a target="_blank" href="https://www.linkedin.com/in/carlos-marquetti-9066a8216/"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
-        <a target="_blank" href="https://www.instagram.com/eduardo.marquetti/"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-        <a target="_blank" href="https://github.com/CarlosMarquetti"><i class="fa-brands fa-github fa-2xl"></i></a>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/carlos-marquetti-9066a8216/"
+          ><i class="fa-brands fa-linkedin fa-2xl"></i
+        ></a>
+        <a target="_blank" href="https://www.instagram.com/eduardo.marquetti/"
+          ><i class="fa-brands fa-instagram fa-2xl"></i
+        ></a>
+        <a target="_blank" href="https://github.com/CarlosMarquetti"
+          ><i class="fa-brands fa-github fa-2xl"></i
+        ></a>
         <a class="" href="#">.</a>
         <img
           src="https://github.com/CarlosMarquetti.png"
@@ -117,24 +176,34 @@
       </div>
       <img class="icone-gen" src="./src/assets/iconeGen.svg" alt="" />
       <div class="social-links">
-        <a target="_blank" href="#"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
-        <a target="_blank" href="https://www.instagram.com/gb_zap/?igshid=YmMyMTA2M2Y%3D"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-        <a target="_blank" href="https://github.com/GabrielLBl"><i class="fa-brands fa-github fa-2xl"></i></a>
+        <a target="_blank" href="#"
+          ><i class="fa-brands fa-linkedin fa-2xl"></i
+        ></a>
+        <a
+          target="_blank"
+          href="https://www.instagram.com/gb_zap/?igshid=YmMyMTA2M2Y%3D"
+          ><i class="fa-brands fa-instagram fa-2xl"></i
+        ></a>
+        <a target="_blank" href="https://github.com/GabrielLBl"
+          ><i class="fa-brands fa-github fa-2xl"></i
+        ></a>
         <a class="" href="#">.</a>
-        <img
-          src="https://github.com/GabrielLBl.png"
-          alt="imagem do GB"
-        />
+        <img src="https://github.com/GabrielLBl.png" alt="imagem do GB" />
       </div>
       <div class="social-links">
-        <a target="_blank" href="https://www.linkedin.com/in/kaique-fernando-vieira-212b85196/"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
-        <a target="_blank" href="https://www.instagram.com/kaiqueviiera/"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-        <a target="_blank" href="https://github.com/kaiquvieira"><i class="fa-brands fa-github fa-2xl"></i></a>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/kaique-fernando-vieira-212b85196/"
+          ><i class="fa-brands fa-linkedin fa-2xl"></i
+        ></a>
+        <a target="_blank" href="https://www.instagram.com/kaiqueviiera/"
+          ><i class="fa-brands fa-instagram fa-2xl"></i
+        ></a>
+        <a target="_blank" href="https://github.com/kaiquvieira"
+          ><i class="fa-brands fa-github fa-2xl"></i
+        ></a>
         <a class="" href="#">.</a>
-        <img
-          src="https://github.com/kaiquvieira.png"
-          alt="imagem do kaique"
-        />
+        <img src="https://github.com/kaiquvieira.png" alt="imagem do kaique" />
       </div>
     </footer>
   </body>

@@ -1,14 +1,17 @@
+/* Global configs */
 :root {
-  --bg-red-500: #ed5041;
-  --bg-red-600: #e83030;
+  --green-500: #25aa3f;
+  --green-600: #00a020;
+  /* --green-600: #08661a; */
+  --red-500: #ed5041;
+  --red-600: #e83030;
   --bg-p-100: hsl(220, 70%, 60%);
   --bg-p-300: hsl(250, 50%, 55%);
-  --bg-p-500: hsl(235, 50%, 30%);;
+  --bg-p-500: hsl(235, 50%, 30%);
 }
 
 body {
-  
-  background-color:  var(--bg-p-500);
+  background-color: var(--bg-p-500);
   color: #000;
 }
 
@@ -27,10 +30,10 @@ header {
   align-items: center;
   width: 100vw;
   height: 50px;
-  border:1px solid #000000;
+  border: 1px solid #000000;
 }
 
-/* centering */
+/* main */
 main {
   position: fixed;
   display: flex;
@@ -92,38 +95,39 @@ section {
   justify-content: space-between;
   padding: 0 2%;
   align-items: center;
-  
+
   height: 40px;
   border-radius: 10px;
   color: white;
 }
 
-  /* add hover */
+/* buttons */
 
 .delete {
   width: 35%;
-  background-color: var(--bg-red-500);
-  border: 1px solid var(--bg-red-600);
+  background-color: var(--red-500);
+  border: 1px solid var(--red-600);
   color: white;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .delete:hover {
-  transition: all .1s;
-  background: #e83030;
+  transition: all 0.1s;
+  background-color: var(--red-600);
 }
 
 .add {
   width: 60%;
-  background: #25aa3f;
-  border: 1px solid #08661a;
+  background: var(--green-500);
+  border: 1px solid var(--green-600);
 }
 
 .add:hover {
-
+  transition: all 0.1s;
+  background-color: var(--green-600);
 }
 
-.container-header-buttons > form{
+.container-header-buttons > form {
   position: relative;
   display: flex;
   justify-content: center;
@@ -133,7 +137,6 @@ section {
   background-color: #fff;
   border-radius: 20px;
 }
-
 
 .container-header-buttons > form input {
   border-style: none;
@@ -158,8 +161,8 @@ section {
 }
 
 /* Modal */
-
 .modal {
+  display: none;
   position: fixed;
   z-index: 1;
   height: 100vh;
@@ -172,53 +175,46 @@ section {
   -webkit-backdrop-filter: blur(6px) saturate(120%) contrast(100%);
 }
 
+/* Modal Content */
 .modal-content {
+  display: none;
+  flex-direction: column;
   position: absolute;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: #f4f3f1;
+  padding: 30px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
   max-width: 25em;
-  height: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  background-color: #f4f3f1;
-  padding: 30px;
-  /* border: 1px solid var(--bg-p-500); */
   border-radius: 10px;
-}
-
-.modal-content > button {
-  cursor: pointer;
-  border-style: none;
-  width: 20px;
-  position: absolute;
-  right: 30px;
-  transition: all .2s;
-}
-
-.modal-content > button:hover {
-  transition: all .1s;
-  color: var(--bg-red-600);
 }
 
 .modal-content h1 {
   font-weight: 600;
   margin-bottom: 5%;
-  color: var(--bg-red-600);
+}
+
+.modal-content > .x-close {
+  cursor: pointer;
+  border-style: none;
+  width: 20px;
+  position: absolute;
+  right: 30px;
+  transition: all 0.2s;
+}
+
+.modal-content > .x-close:hover {
+  transition: all 0.1s;
+  color: var(--red-600);
 }
 
 .modal-content hr {
   border: px solid rgba(0, 0, 0, 0.3);
   width: 100%;
   margin-bottom: 5%;
-}
-
-.modal-content small {
-  color: var(--bg-p-100);
-  font-weight: 600;
 }
 
 .modal-content div {
@@ -231,10 +227,20 @@ section {
   align-items: flex-end;
   background: linear-gradient(to right, var(--bg-p-100), var(--bg-p-500));
   width: 100%;
-  height: 20%;
-  padding: 0 30px 20px 0;
+  padding: 0 30px 25px 0;
   gap: 20px;
 }
+
+.modal-content div > button {
+  font-size: 1rem;
+  cursor: pointer;
+  border-style: none;
+  font-weight: 500;
+  border-radius: 5px;
+  height: 70%;
+  width: 30%;
+}
+
 .modal-content div > button:first-child {
   border-style: none;
   border-radius: 0px;
@@ -246,16 +252,63 @@ section {
   display: none;
 }
 
-
 .modal-content div > button:first-child:hover ~ hr {
   position: absolute;
-  bottom: 5px;
   left: 40%;
   display: flex;
   border: 2px solid #000;
   width: 5%;
   animation-name: bb;
-  animation: bb 1s linear infinite alternate ;
+  animation: bb 1s linear infinite alternate;
+}
+
+/* modal delete */
+.modal-content-delete {
+  height: 50%;
+}
+
+.modal-content-delete h1 {
+  color: var(--red-600);
+}
+
+.modal-content-delete small {
+  color: var(--bg-p-100);
+  font-weight: 600;
+}
+
+.modal-content-delete div {
+  height: 20%;
+}
+
+.modal-content-delete div > button:first-child:hover ~ hr {
+  bottom: 5px;
+}
+
+/* Modal Add */
+.modal-content-add {
+  height: 70%;
+}
+
+.modal-content-add h1 {
+  color: var(--green-600);
+}
+
+.modal-content-add form {
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+ * ESTILIZAR OS CAMPOS OBRIGATÓRIOS PARA ADICIONAR MEMBRO
+ * ...
+*/
+
+.modal-content-add div {
+  height: 15%;
+}
+
+.modal-content-add div > button:first-child:hover ~ hr {
+  bottom: 30%;
 }
 
 @keyframes bb {
@@ -267,16 +320,6 @@ section {
     border-color: var(--bg-p-300);
     left: 49%;
   }
-}
-
-.modal-content div > button {
-  font-size: 1rem;
-  cursor: pointer;
-  border-style: none;
-  font-weight: 500;
-  border-radius: 5px;
-  height: 70%;
-  width: 30%;
 }
 
 /* Container Body */
@@ -293,23 +336,23 @@ section {
   height: 100%;
   flex-direction: column;
   flex-wrap: wrap;
-} 
+}
 
-thead{
+thead {
   height: 50px;
   border-bottom: 1px solid #000;
   display: flex;
   align-items: center;
 }
 
-tbody{
+tbody {
   flex-grow: 1;
   border-bottom: 1px solid #000;
   display: flex;
   flex-direction: column;
 }
 
-tfoot{
+tfoot {
   height: 50px;
 }
 
@@ -325,7 +368,7 @@ footer {
   gap: 20px;
   width: 100vw;
   height: 50px;
-  border:1px solid #000000;
+  border: 1px solid #000000;
 }
 
 .social-links {
@@ -340,7 +383,7 @@ footer {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  transition: all .4s;
+  transition: all 0.4s;
 }
 
 .icone-gen {
@@ -363,30 +406,29 @@ footer {
   border: 1px solid var(--bg-p-500);
 }
 
-.social-links a, .social-links i  {
-  transition: opacity .5s, display .5s, visibility .5s;
+.social-links a,
+.social-links i {
+  transition: opacity 0.5s, display 0.5s, visibility 0.5s;
   opacity: 0;
   visibility: hidden;
-  
 }
 
 .fa-linkedin {
   color: #000;
-
 }
 
 .fa-instagram {
   color: #000;
-
 }
 
 .fa-github {
   color: #000;
 }
 
-.social-links:hover a, .social-links:hover i{
+.social-links:hover a,
+.social-links:hover i {
   transition: opacity 1s, display 1s, visibility 1s;
-  
+
   opacity: 1;
   display: block;
   visibility: visible;
