@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- add favicon -->
+    <link
+      rel="shortcut icon"
+      href="./src/assets/favicon.png"
+      type="image/x-icon"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/styles/reset.css" />
     <link rel="stylesheet" href="./src/styles/style.css" />
@@ -11,8 +15,8 @@
       src="https://kit.fontawesome.com/b1ac7e6895.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./src/scripts.js"></script>
-    <title>crud-gen</title>
+    <script src="./src/scripts.js" defer></script>
+    <title>Gen Members</title>
   </head>
   <body>
     <header>
@@ -30,11 +34,11 @@
                   <i class="fa-solid fa-magnifying-glass fa-lg"></i>
                 </button>
               </form>
-              <button class="button delete">
+              <button id="btn-delete" class="button delete">
                 DELETE
                 <i class="fa-solid fa-circle-minus fa-xl"></i>
               </button>
-              <button class="button add">
+              <button id="btn-add" class="button add">
                 ADD NEW MEMBER
                 <i class="fa-solid fa-circle-plus fa-xl"></i>
               </button>
@@ -43,7 +47,7 @@
           <table class="container-body">
             <thead>
               <tr class="topicos-container">
-                <th><input  type="checkbox" /></th>
+                <th><input type="checkbox" /></th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>GitHub</th>
@@ -98,9 +102,17 @@
     </main>
     <footer>
       <div class="social-links">
-        <a target="_blank" href="https://www.linkedin.com/in/thiagodepaulasouza/"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
-        <a target="_blank" href="https://www.instagram.com/salequi_lapua/"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-        <a target="_blank" href="https://github.com/thiagodepaulasouza"><i class="fa-brands fa-github fa-2xl"></i></a>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/thiagodepaulasouza/"
+          ><i class="fa-brands fa-linkedin fa-2xl"></i
+        ></a>
+        <a target="_blank" href="https://www.instagram.com/salequi_lapua/"
+          ><i class="fa-brands fa-instagram fa-2xl"></i
+        ></a>
+        <a target="_blank" href="https://github.com/thiagodepaulasouza"
+          ><i class="fa-brands fa-github fa-2xl"></i
+        ></a>
         <a class="" href="#">.</a>
         <img
           src="https://github.com/thiagodepaulasouza.png"
@@ -108,9 +120,17 @@
         />
       </div>
       <div class="social-links">
-        <a target="_blank" href="https://www.linkedin.com/in/carlos-marquetti-9066a8216/"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
-        <a target="_blank" href="https://www.instagram.com/eduardo.marquetti/"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-        <a target="_blank" href="https://github.com/CarlosMarquetti"><i class="fa-brands fa-github fa-2xl"></i></a>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/carlos-marquetti-9066a8216/"
+          ><i class="fa-brands fa-linkedin fa-2xl"></i
+        ></a>
+        <a target="_blank" href="https://www.instagram.com/eduardo.marquetti/"
+          ><i class="fa-brands fa-instagram fa-2xl"></i
+        ></a>
+        <a target="_blank" href="https://github.com/CarlosMarquetti"
+          ><i class="fa-brands fa-github fa-2xl"></i
+        ></a>
         <a class="" href="#">.</a>
         <img
           src="https://github.com/CarlosMarquetti.png"
@@ -119,24 +139,34 @@
       </div>
       <img class="icone-gen" src="./src/assets/iconeGen.svg" alt="" />
       <div class="social-links">
-        <a target="_blank" href="#"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
-        <a target="_blank" href="https://www.instagram.com/gb_zap/?igshid=YmMyMTA2M2Y%3D"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-        <a target="_blank" href="https://github.com/GabrielLBl"><i class="fa-brands fa-github fa-2xl"></i></a>
+        <a target="_blank" href="#"
+          ><i class="fa-brands fa-linkedin fa-2xl"></i
+        ></a>
+        <a
+          target="_blank"
+          href="https://www.instagram.com/gb_zap/?igshid=YmMyMTA2M2Y%3D"
+          ><i class="fa-brands fa-instagram fa-2xl"></i
+        ></a>
+        <a target="_blank" href="https://github.com/GabrielLBl"
+          ><i class="fa-brands fa-github fa-2xl"></i
+        ></a>
         <a class="" href="#">.</a>
-        <img
-          src="https://github.com/GabrielLBl.png"
-          alt="imagem do GB"
-        />
+        <img src="https://github.com/GabrielLBl.png" alt="imagem do GB" />
       </div>
       <div class="social-links">
-        <a target="_blank" href="https://www.linkedin.com/in/kaique-fernando-vieira-212b85196/"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
-        <a target="_blank" href="https://www.instagram.com/kaiqueviiera/"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-        <a target="_blank" href="https://github.com/kaiquvieira"><i class="fa-brands fa-github fa-2xl"></i></a>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/kaique-fernando-vieira-212b85196/"
+          ><i class="fa-brands fa-linkedin fa-2xl"></i
+        ></a>
+        <a target="_blank" href="https://www.instagram.com/kaiqueviiera/"
+          ><i class="fa-brands fa-instagram fa-2xl"></i
+        ></a>
+        <a target="_blank" href="https://github.com/kaiquvieira"
+          ><i class="fa-brands fa-github fa-2xl"></i
+        ></a>
         <a class="" href="#">.</a>
-        <img
-          src="https://github.com/kaiquvieira.png"
-          alt="imagem do kaique"
-        />
+        <img src="https://github.com/kaiquvieira.png" alt="imagem do kaique" />
       </div>
     </footer>
   </body>
