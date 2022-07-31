@@ -338,6 +338,12 @@ section {
   flex-wrap: wrap;
 }
 
+.nonstyle-button {
+  cursor: pointer;
+  border-style: none;
+  background: transparent;
+}
+
 thead {
   height: 50px;
   border-bottom: 1px solid #000;
