@@ -330,18 +330,19 @@ section {
 .fa-pen {
   color: #ffbf21;
 }
-/* 
+ 
 .container-body {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  flex-wrap: wrap;
-} */
+  margin: 0px 0px 0px 15px;
+} 
 
 .nonstyle-button {
   cursor: pointer;
   border-style: none;
   background: transparent;
+}
+
+.topicos-container{
+  text-align: justify;
 }
 
 /* thead {
@@ -350,13 +351,6 @@ section {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-}
-
-.topicos-container{
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-  justify-content: space-around;
 }
 
 tbody{
