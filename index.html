@@ -19,26 +19,83 @@
     <title>Gen Members</title>
   </head>
   <body>
+<<<<<<< HEAD
     <header>
       <h2>Registro de Membros</h2>
     </header>
+=======
+    <div class="modal">
+      <div class="modal-content modal-content-edit">
+        <h1>Editar Membro</h1> 
+        <button class="x-close" onclick="cancelar(event)">
+          <i class="fa-solid fa-xmark fa-xl"></i>
+        </button>
+        <hr />
+        <form>
+          <label for="name">nome</label>
+          <input type="text" name="name" id="name" />
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email" />
+          <label for="github">GitHub</label>
+          <input type="text" name="github" id="github" />
+          <label for="phone">Phone</label>
+          <input type="text" name="phone" id="phone" />
+          <div>
+            <button onclick="cancelar(event)">Cancel</button>
+            <hr />
+            <button class="edit">Editar</button>
+          </div>
+        </form>
+      </div>
+      <div class="modal-content modal-content-delete">
+        <h1>Deletar Membro</h1>
+        <button class="x-close" onclick="cancelar(event)">
+          <i class="fa-solid fa-xmark fa-xl"></i>
+        </button>
+        <hr />
+        <span>Você tem certeza que deseja deletar esse membro?</span>
+        <br />
+        <small>Essa ação não poderá ser revertida.</small> <br />
+        <form>
+          <div>
+            <button onclick="cancelar(event)">Cancel</button>
+            <hr />
+            <button class="delete">Delete</button>
+          </div>
+        </form>
+      </div>
+      <div class="modal-content modal-content-add">
+        <h1>Adicionar Membro</h1>
+        <button class="x-close" onclick="cancelar(event)">
+          <i class="fa-solid fa-xmark fa-xl"></i>
+        </button>
+        <hr />
+        <form>
+          <label for="name">nome</label>
+          <input type="text" name="name" id="name" placeholder="nome do membro"/>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="email do membro "/>
+          <label for="github">GitHub</label>
+          <input type="text" name="github" id="github" placeholder="github do membro "/>
+          <label for="phone">Phone</label>
+          <input type="text" name="phone" id="phone" placeholder="celular do membro "/>
+          <div>
+            <button onclick="cancelar(event)">Cancel</button>
+            <hr />
+            <button onclick="adicionar()" class="add">Adicionar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <header><h2>Registro de Membros</h2></header>
+>>>>>>> 31f7a7c598ecb4af974e5b2a1bf902abda1b9a89
     <main>
       <section>
         <div class="container">
           <div class="container-header">
             <h1>Gen <b>Members</b></h1>
             <div class="container-header-buttons">
-              <form>
-                <input type="text" />
-                <button class="search">
-                  <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-                </button>
-              </form>
-              <button id="btn-delete" class="button delete">
-                DELETE
-                <i class="fa-solid fa-circle-minus fa-xl"></i>
-              </button>
-              <button id="btn-add" class="button add">
+              <button id="btn-modal-add" class="button add">
                 ADD NEW MEMBER
                 <i class="fa-solid fa-circle-plus fa-xl"></i>
               </button>
@@ -47,7 +104,6 @@
           <table class="container-body">
             <thead>
               <tr class="topicos-container">
-                <th><input type="checkbox" /></th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>GitHub</th>
@@ -56,13 +112,18 @@
               </tr>
             </thead>
             <tbody class="table-body">
+<<<<<<< HEAD
               <tr class="body-info">
                 <td><input type="checkbox" /></td>
+=======
+              <tr>
+>>>>>>> 31f7a7c598ecb4af974e5b2a1bf902abda1b9a89
                 <td>marcelo</td>
                 <td>marcelinda21@mail.com</td>
                 <td>github.com&#47;marcelindao</td>
                 <td>(11) 555-2222</td>
                 <td>
+<<<<<<< HEAD
                   <i class="fa-solid fa-pen"></i>
                   <i class="fa-solid fa-trash"></i>
                 </td>
@@ -87,6 +148,14 @@
                 <td>
                   <i class="fa-solid fa-pen"></i>
                   <i class="fa-solid fa-trash"></i>
+=======
+                  <button id="btn-edit" class="nonstyle-button">
+                    <i class="fa-solid fa-pen"></i>
+                  </button>
+                  <button id="btn-delete" class="nonstyle-button">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+>>>>>>> 31f7a7c598ecb4af974e5b2a1bf902abda1b9a89
                 </td>
               </tr>
             </tbody>
