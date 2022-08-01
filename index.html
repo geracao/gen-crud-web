@@ -31,7 +31,9 @@
           <input type="text" name="name" id="name" />
           <label for="email">Email</label>
           <input type="text" name="email" id="email" />
-          <label for="phone">GitHub</label>
+          <label for="github">GitHub</label>
+          <input type="text" name="github" id="github" />
+          <label for="phone">Phone</label>
           <input type="text" name="phone" id="phone" />
           <div>
             <button onclick="cancelar(event)">Cancel</button>
@@ -65,15 +67,17 @@
         <hr />
         <form>
           <label for="name">nome</label>
-          <input type="text" name="name" id="name" />
+          <input type="text" name="name" id="name" placeholder="nome do membro"/>
           <label for="email">Email</label>
-          <input type="text" name="email" id="email" />
-          <label for="phone">GitHub</label>
-          <input type="text" name="phone" id="phone" />
+          <input type="email" name="email" id="email" placeholder="email do membro "/>
+          <label for="github">GitHub</label>
+          <input type="text" name="github" id="github" placeholder="github do membro "/>
+          <label for="phone">Phone</label>
+          <input type="text" name="phone" id="phone" placeholder="celular do membro "/>
           <div>
             <button onclick="cancelar(event)">Cancel</button>
             <hr />
-            <button class="add">Adicionar</button>
+            <button onclick="adicionar()" class="add">Adicionar</button>
           </div>
         </form>
       </div>
