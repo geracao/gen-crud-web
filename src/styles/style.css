@@ -330,21 +330,28 @@ section {
 .fa-pen {
   color: #ffbf21;
 }
-
+/* 
 .container-body {
   display: flex;
   height: 100%;
   flex-direction: column;
   flex-wrap: wrap;
+} */
+
+.nonstyle-button {
+  cursor: pointer;
+  border-style: none;
+  background: transparent;
 }
 
-thead {
+/* thead {
   height: 50px;
   border-bottom: 1px solid #000;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-}
-
+} */
+/*
 tbody {
   flex-grow: 1;
   border-bottom: 1px solid #000;
@@ -354,7 +361,7 @@ tbody {
 
 tfoot {
   height: 50px;
-}
+} */
 
 /* footer */
 footer {
