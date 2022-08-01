@@ -350,7 +350,6 @@ section {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-<<<<<<< HEAD
 }
 
 .topicos-container{
@@ -361,11 +360,6 @@ section {
 }
 
 tbody{
-=======
-} */
-/*
-tbody {
->>>>>>> 31f7a7c598ecb4af974e5b2a1bf902abda1b9a89
   flex-grow: 1;
   border-bottom: 1px solid #000;
   display: flex;
