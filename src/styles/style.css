@@ -223,43 +223,35 @@ section {
   left: 0;
   border-radius: 0px 0px 8px 8px;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(to right, var(--bg-p-100), var(--bg-p-500));
   width: 100%;
-  padding: 0 30px 25px 0;
   gap: 20px;
 }
 
 .modal-content div > button {
   font-size: 1rem;
   cursor: pointer;
-  border-style: none;
   font-weight: 500;
-  border-radius: 5px;
   height: 70%;
   width: 30%;
+  border-style: none;
+  border-radius: 10px;
 }
 
 .modal-content div > button:first-child {
-  border-style: none;
-  border-radius: 0px;
-  background: transparent;
-  color: white;
+  background: rgb(148, 145, 145);
+  color: black;
 }
+
+.modal-content div > button:first-child:hover{
+  background-color: gray;
+}
+
 
 .modal-content div > button:first-child ~ hr {
   display: none;
-}
-
-.modal-content div > button:first-child:hover ~ hr {
-  position: absolute;
-  left: 40%;
-  display: flex;
-  border: 2px solid #000;
-  width: 5%;
-  animation-name: bb;
-  animation: bb 1s linear infinite alternate;
 }
 
 /* modal delete */
@@ -343,6 +335,12 @@ section {
 
 .topicos-container{
   text-align: justify;
+  height: 50px;
+}
+
+.table-body{
+  flex-grow: 1;
+  max-height: max-content;
 }
 
 /* thead {
