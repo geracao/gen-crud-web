@@ -29,7 +29,7 @@ function insertItem(item, index) {
     <td>${item.email}</td>
     <td>${item.github}</td>
     <td>${item.phone}</td>
-    <td>
+    <td class="actions-body">
       <button class='nonstyle-button' onclick="editItem(${index})">
         <i class="fa-solid fa-pen"></i>
       </button>
