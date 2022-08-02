@@ -14,13 +14,13 @@ btnAdd.addEventListener("click", () => modalAddMember());
 function addMember(newMember) {
   fetch(url, {
     method: "POST",
-    body: JSON.stringify(newMember),
+    body: newMember,
     headers: {
       "Content-Type": "application/json; charset=UTF-8",
     },
   })
     .then((response) => response.json())
-    .then((data) => (alertApi.textContent = data))
+    .then((data) => console.log(data))
     .catch((error) => console.error(error));
 }
 
@@ -35,14 +35,13 @@ function modalAddMember() {
   <hr />
   <form id="form-add">
     <label for="name">nome</label>
-    <input type="text" name="name" id="name" placeholder="nome do membro"/>
-    <span id="valor-name"></span>
+    <input type="text" name="name-add" id="name-add" placeholder="nome do membro"/>
     <label for="email">Email</label>
-    <input type="email" name="email" id="email" placeholder="email do membro "/>
+    <input type="email" name="email-add" id="email-add" placeholder="email do membro "/>
     <label for="github">GitHub</label>
-    <input type="text" name="github" id="github" placeholder="github do membro "/>
+    <input type="text" name="github-add" id="github-add" placeholder="github do membro "/>
     <label for="phone">Phone</label>
-    <input type="text" name="phone" id="phone" placeholder="celular do membro "/>
+    <input type="text" name="phone-add" id="phone-add" placeholder="celular do membro "/>
     <div>
       <button onclick="cancelar(event)">Cancel</button>
       <hr />
@@ -50,12 +49,23 @@ function modalAddMember() {
     </div>
   </form>
   `;
-  const btn = document.querySelector("#send")
-  btn.addEventListener('click', (e) => {
+  const btn = document.querySelector("#send");
+  btn.addEventListener("click", (e) => {
     e.preventDefault();
-    const name = document.querySelector("#name").value
-    console.log(name);
-  })
+    const name = document.querySelector("#name-add").value;
+    const email = document.querySelector("#email-add").value;
+    const github = document.querySelector("#github-add").value;
+    const phone = document.querySelector("#phone-add").value;
+    if (name && email && github && phone) {
+      values = `{ "nome": "${name}", "email": "${email}", "github": "${github}", "phone": "${phone}"}`;
+      // console.log(JSON.parse(values));
+      addMember(values)
+    } else {
+      console.warn(`
+    🚧 Favor preencha todos os campos! 🚧
+    `);
+    }
+  });
 }
 
 function getMembros() {
