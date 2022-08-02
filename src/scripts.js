@@ -9,6 +9,55 @@ const formDelete = document.getElementById("form-delete");
 
 const url = "https://localhost:7210/api/Membro";
 
+btnAdd.addEventListener("click", () => modalAddMember());
+
+function addMember(newMember) {
+  fetch(url, {
+    method: "POST",
+    body: JSON.stringify(newMember),
+    headers: {
+      "Content-Type": "application/json; charset=UTF-8",
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => (alertApi.textContent = data))
+    .catch((error) => console.error(error));
+}
+
+function modalAddMember() {
+  modal.style.display = "flex";
+  modalAdd.style.display = "flex";
+  modalAdd.innerHTML = `
+  <h1>Adicionar Membro</h1>
+  <button class="x-close" onclick="cancelar(event)">
+    <i class="fa-solid fa-xmark fa-xl"></i>
+  </button>
+  <hr />
+  <form id="form-add">
+    <label for="name">nome</label>
+    <input type="text" name="name" id="name" placeholder="nome do membro"/>
+    <span id="valor-name"></span>
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" placeholder="email do membro "/>
+    <label for="github">GitHub</label>
+    <input type="text" name="github" id="github" placeholder="github do membro "/>
+    <label for="phone">Phone</label>
+    <input type="text" name="phone" id="phone" placeholder="celular do membro "/>
+    <div>
+      <button onclick="cancelar(event)">Cancel</button>
+      <hr />
+      <button id="send" class="add">Adicionar</button>
+    </div>
+  </form>
+  `;
+  const btn = document.querySelector("#send")
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const name = document.querySelector("#name").value
+    console.log(name);
+  })
+}
+
 function getMembros() {
   fetch(url)
     .then((response) => response.json())
@@ -78,37 +127,8 @@ const cancelar = (e) => {
   modalAdd.style.display = "none";
 };
 
-//#region Ainda precisa Implementar
-
-// function getUserById(id) {
-//   fetch(`${url}/${id}`)
-//     .then((response) => response.json())
-//     .then((data) => {
-//       userName.textContent = data.name;
-//       userCity.textContent = data.city;
-//       userAvatar.src = data.avatar;
-//     })
-//     .catch((error) => console.error(error));
-// }
 function editMember(index) {
   console.log("opa ", index);
-}
-
-function adicionar() {
-  console.log();
-}
-
-function addUser(newUser) {
-  fetch(url, {
-    method: "POST",
-    body: JSON.stringify(newUser),
-    headers: {
-      "Content-Type": "application/json; charset=UTF-8",
-    },
-  })
-    .then((response) => response.json())
-    .then((data) => (alertApi.textContent = data))
-    .catch((error) => console.error(error));
 }
 
 function updateUser(updatedUser, id) {
@@ -123,13 +143,5 @@ function updateUser(updatedUser, id) {
     .then((data) => (alertApi.textContent = data))
     .catch((error) => console.error(error));
 }
-
-// Usar para criar linha da tabela
-//#endregion
-
-btnAdd.addEventListener("click", () => {
-  modal.style.display = "flex";
-  modalAdd.style.display = "flex";
-});
 
 window.onload = () => getMembros();
