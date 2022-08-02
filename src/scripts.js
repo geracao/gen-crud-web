@@ -5,6 +5,7 @@ const modalDelete = document.querySelector(".modal-content-delete");
 const modalAdd = document.querySelector(".modal-content-add");
 const btnDelete = document.getElementById("btn-delete");
 const btnAdd = document.getElementById("btn-modal-add");
+const formDelete = document.getElementById("form-delete");
 
 const url = "https://localhost:7210/api/Membro";
 
@@ -14,32 +15,59 @@ function getMembros() {
     .then((data) => {
       itens = data;
       tbody.innerHTML = "";
-      itens.forEach((item, index) => {
-        insertItem(item, index);
+      itens.forEach((member) => {
+        insertMember(member);
       });
     })
     .catch((error) => console.error(error));
 }
 
-function insertItem(item, index) {
+function insertMember(member) {
   let tr = document.createElement("tr");
 
   tr.innerHTML = `
-    <td>${item.nome}</td>
-    <td>${item.email}</td>
-    <td>${item.github}</td>
-    <td>${item.phone}</td>
+    <td>${member.nome}</td>
+    <td>${member.email}</td>
+    <td>${member.github}</td>
+    <td>${member.phone}</td>
     <td>
-      <button class='nonstyle-button' onclick="editItem(${index})">
+      <button id="" class='nonstyle-button' onclick="editMember(${member.id})">
         <i class="fa-solid fa-pen"></i>
       </button>
-      <button class='nonstyle-button' onclick="deleteItem(${index})">
+      <button id=""btn-delete class='nonstyle-button' onclick="deleteMember(${member.id})">
         <i class="fa-solid fa-trash"></i>
       </button>
     </td>
   `;
 
   tbody.appendChild(tr);
+}
+
+function deleteMember(id) {
+  console.log("id do membro: " + id);
+  modal.style.display = "flex";
+  modalDelete.style.display = "flex";
+
+  let divDelete = document.getElementById("div-delete");
+  divDelete.innerHTML = `
+  <button onclick="cancelar(event)">Cancel</button>
+  <hr />
+  <button onclick="deleteUser(${id})" class="delete">Delete</button>
+  `;
+  formDelete.appendChild(divDelete);
+}
+
+function deleteUser(id) {
+  console.log(id + " removido");
+  fetch(`${url}/${id}`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json; charset=UTF-8",
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((error) => console.error(error));
 }
 
 const cancelar = (e) => {
@@ -50,20 +78,7 @@ const cancelar = (e) => {
   modalAdd.style.display = "none";
 };
 
-btnDelete.addEventListener("click", () => {
-  modal.style.display = "flex";
-  modalDelete.style.display = "flex";
-});
-
-btnAdd.addEventListener("click", () => {
-  modal.style.display = "flex";
-  modalAdd.style.display = "flex";
-});
-
-window.onload = () => getMembros();
-
 //#region Ainda precisa Implementar
-
 
 // function getUserById(id) {
 //   fetch(`${url}/${id}`)
@@ -75,12 +90,12 @@ window.onload = () => getMembros();
 //     })
 //     .catch((error) => console.error(error));
 // }
-function editItem(index) {
+function editMember(index) {
   console.log("opa ", index);
 }
 
 function adicionar() {
-  console.log();  
+  console.log();
 }
 
 function addUser(newUser) {
@@ -109,22 +124,12 @@ function updateUser(updatedUser, id) {
     .catch((error) => console.error(error));
 }
 
-function deleteUser(id) {
-  fetch(`${url}/${id}`, {
-    method: "DELETE",
-    headers: {
-      "Content-Type": "application/json; charset=UTF-8",
-    },
-  })
-    .then((response) => response.json())
-    .then((data) => (alertApi.textContent = data))
-    .catch((error) => console.error(error));
-}
-
-// function deleteItem(index) {
-//   itens.splice(index, 1)
-//   deleteUser(itens)
-// }
-
 // Usar para criar linha da tabela
 //#endregion
+
+btnAdd.addEventListener("click", () => {
+  modal.style.display = "flex";
+  modalAdd.style.display = "flex";
+});
+
+window.onload = () => getMembros();
