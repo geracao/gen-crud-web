@@ -20,66 +20,10 @@
   </head>
   <body>
     <div class="modal">
+      <!-- ADICIONAR MEMBRO -->
+      <div class="modal-content modal-content-add"></div>
       <!-- EDITAR MEMBRO -->
-      <div class="modal-content modal-content-edit">
-        <h1>Editar Membro</h1>
-        <button class="x-close" onclick="cancelar(event)">
-          <i class="fa-solid fa-xmark fa-xl"></i>
-        </button>
-        <hr />
-        <form>
-          <label for="name">nome</label>
-          <input
-            type="text"
-            name="name-edit"
-            id="name-edit"
-            required
-            minlength="3"
-            minlength="3"
-            alt="digite seu nome"
-            title="digite seu nome"
-          />
-          <label for="email">Email</label>
-          <input
-            type="text"
-            name="email-edit"
-            id="email-edit"
-            required
-            minlength="3"
-            maxlength="255"
-            alt="digite seu email"
-            title="digite seu email"
-          />
-          <label for="github">GitHub</label>
-          <input
-            type="text"
-            name="github-edit"
-            id="github-edit"
-            required
-            minlength="3"
-            maxlength="255"
-            alt="digite seu github"
-            title="digite seu github"
-            value=""
-          />
-          <label for="phone">Phone</label>
-          <input
-            type="text"
-            name="phone-edit"
-            id="phone-edit"
-            required
-            minlength="3"
-            maxlength="17"
-            alt="digite seu telefone ou celular"
-            title="digite seu celular"
-          />
-          <div>
-            <button onclick="cancelar(event)">Cancel</button>
-            <hr />
-            <button class="edit">Editar</button>
-          </div>
-        </form>
-      </div>
+      <div class="modal-content modal-content-update"></div>
       <!-- DELETAR MEMBRO -->
       <div class="modal-content modal-content-delete">
         <h1>Deletar Membro</h1>
@@ -95,8 +39,6 @@
           <div id="div-delete"></div>
         </form>
       </div>
-      <!-- ADICIONAR MEMBRO -->
-      <div class="modal-content modal-content-add"></div>
     </div>
     <header>
       <h2>Registro de Membros</h2>
