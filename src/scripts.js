@@ -46,7 +46,7 @@ function insertMember(member) {
       <button id="" class='nonstyle-button' onclick="modalUpdateMember(${member.id})">
         <i class="fa-solid fa-pen"></i>
       </button>
-      <button id="" btn-delete class='nonstyle-button' onclick="deleteMember(${member.id})">
+      <button id="" btn-delete class='nonstyle-button' onclick="modalDeleteMember(${member.id})">
         <i class="fa-solid fa-trash"></i>
       </button>
     </td>
@@ -252,7 +252,7 @@ function updateMember(updatedMember, id) {
 }
 
 // DELETE
-function deleteMember(id) {
+function modalDeleteMember(id) {
   console.log("id do membro: " + id);
   modal.style.display = "flex";
   modalDelete.style.display = "flex";
@@ -260,12 +260,12 @@ function deleteMember(id) {
   let divDelete = document.getElementById("div-delete");
   divDelete.innerHTML = `
   <button onclick="cancelar(event)">Cancel</button>
-  <button onclick="deleteUser(${id})" class="delete">Delete</button>
+  <button onclick="deleteMember(${id})" class="delete">Delete</button>
   `;
   formDelete.appendChild(divDelete);
 }
 
-function deleteUser(id) {
+function deleteMember(id) {
   console.log(id + " removido");
   fetch(`${url}/${id}`, {
     method: "DELETE",
