@@ -81,7 +81,7 @@ function modalAddMember() {
   </button>
   <hr />
   <form id="form-add">
-    <label for="name">Nome:</label>
+    <label for="name">Nome</label>
     <input 
       class="form-input"
       type="text" 
@@ -94,7 +94,7 @@ function modalAddMember() {
       alt="digite seu nome" 
       title="digite seu nome"
       />
-    <label for="email">Email:</label>
+    <label for="email">Email</label>
     <input 
       class="form-input"
       type="email" 
@@ -106,7 +106,7 @@ function modalAddMember() {
       maxlength="255" 
       title="digite seu email"
       />
-    <label for="github">GitHub:</label>
+    <label for="github">GitHub</label>
     <input 
       class="form-input"
       type="text" 
@@ -118,7 +118,7 @@ function modalAddMember() {
       maxlength="255" 
       title="digite seu github"
       />
-    <label for="phone">Phone:</label>
+    <label for="phone">Phone</label>
     <input 
       class="form-input"
       type="text" 
@@ -166,10 +166,11 @@ function modalUpdateMember(id) {
   </button>
   <hr />
   <form>
-    <label for="name">nome</label>
+    <label for="name">Nome</label>
     <input
       type="text"
       name="name-edit"
+      placeholder="nome do membro" 
       id="name-edit"
       required
       minlength="3"
@@ -179,10 +180,11 @@ function modalUpdateMember(id) {
     />
     <label for="email">Email</label>
     <input
-      type="text"
+      type="email"
       name="email-edit"
       id="email-edit"
       required
+      placeholder="email do membro" 
       minlength="3"
       maxlength="255"
       alt="digite seu email"
@@ -195,6 +197,7 @@ function modalUpdateMember(id) {
       id="github-edit"
       required
       minlength="3"
+      placeholder="github do membro" 
       maxlength="255"
       alt="digite seu github"
       title="digite seu github"
@@ -207,6 +210,7 @@ function modalUpdateMember(id) {
       required
       minlength="3"
       maxlength="17"
+      placeholder="celular do membro" 
       alt="digite seu telefone ou celular"
       title="digite seu celular"
     />
