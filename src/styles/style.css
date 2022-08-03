@@ -81,7 +81,7 @@ section {
 
 .container-header-buttons {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   max-width: 550px;
   width: 80%;
