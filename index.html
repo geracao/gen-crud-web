@@ -20,65 +20,23 @@
   </head>
   <body>
     <div class="modal">
-      <div class="modal-content modal-content-edit">
-        <h1>Editar Membro</h1> 
-        <button class="x-close" onclick="cancelar(event)">
-          <i class="fa-solid fa-xmark fa-xl"></i>
-        </button>
-        <hr />
-        <form>
-            <label for="name">Nome</label>
-            <input type="text" name="name" id="name" />
-            <label for="email">Email</label>
-            <input type="text" name="email" id="email" />
-            <label for="github">GitHub</label>
-            <input type="text" name="github" id="github" />
-            <label for="phone">Phone</label>
-            <input type="text" name="phone" id="phone" />
-          <div>
-            <button onclick="cancelar(event)">Cancel</button>
-            <hr />
-            <button class="edit">Editar</button>
-          </div>
-        </form>
-      </div>
+      <!-- ADICIONAR MEMBRO -->
+      <div class="modal-content modal-content-add"></div>
+      <!-- EDITAR MEMBRO -->
+      <div class="modal-content modal-content-update"></div>
+      <!-- DELETAR MEMBRO -->
       <div class="modal-content modal-content-delete">
         <h1>Deletar Membro</h1>
         <button class="x-close" onclick="cancelar(event)">
           <i class="fa-solid fa-xmark fa-xl"></i>
         </button>
         <hr />
+        <span id="info-member-delete"></span>
         <span>Você tem certeza que deseja deletar esse membro?</span>
         <br />
         <small>Essa ação não poderá ser revertida.</small> <br />
-        <form>
-          <div>
-            <button onclick="cancelar(event)">Cancel</button>
-            <hr />
-            <button class="delete">Delete</button>
-          </div>
-        </form>
-      </div>
-      <div class="modal-content modal-content-add">
-        <h1>Adicionar Membro</h1>
-        <button class="x-close" onclick="cancelar(event)">
-          <i class="fa-solid fa-xmark fa-xl"></i>
-        </button>
-        <hr />
-        <form>
-          <label for="name">Nome</label>
-          <input type="text" name="name" id="name" placeholder="nome do membro"/>
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email" placeholder="email do membro "/>
-          <label for="github">GitHub</label>
-          <input type="text" name="github" id="github" placeholder="github do membro "/>
-          <label for="phone">Phone</label>
-          <input type="text" name="phone" id="phone" placeholder="celular do membro "/>
-          <div>
-            <button onclick="cancelar(event)">Cancel</button>
-            <hr />
-            <button onclick="adicionar()" class="add">Adicionar</button>
-          </div>
+        <form id="form-delete">
+          <div id="div-delete"></div>
         </form>
       </div>
     </div>
@@ -109,9 +67,9 @@
             </thead>
             <tbody class="table-body">
               <tr>
-                <td>marcelo</td>
-                <td>marcelinda21@mail.com</td>
-                <td>github.com&#47;marcelindao</td>
+                <td>unknown</td>
+                <td>unknown@mail.com</td>
+                <td>github.com&#47;unknown</td>
                 <td>(11) 555-2222</td>
                 <td>
                   <button id="btn-edit" class="nonstyle-button">
