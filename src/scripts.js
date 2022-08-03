@@ -16,6 +16,7 @@ const cancelar = (e) => {
   modalContent.style.display = "none";
   modalDelete.style.display = "none";
   modalAdd.style.display = "none";
+  modalUpdate.style.display = "none";
 };
 
 // GET
