@@ -16,6 +16,7 @@ const cancelar = (e) => {
   modalContent.style.display = "none";
   modalDelete.style.display = "none";
   modalAdd.style.display = "none";
+  modalUpdate.style.display = "none"
 };
 
 // GET
@@ -80,8 +81,9 @@ function modalAddMember() {
   </button>
   <hr />
   <form id="form-add">
-    <label for="name">nome</label>
+    <label for="name">Nome:</label>
     <input 
+      class="form-input"
       type="text" 
       name="name-add" 
       id="name-add" 
@@ -92,8 +94,9 @@ function modalAddMember() {
       alt="digite seu nome" 
       title="digite seu nome"
       />
-    <label for="email">Email</label>
+    <label for="email">Email:</label>
     <input 
+      class="form-input"
       type="email" 
       name="email-add" 
       id="email-add" 
@@ -103,8 +106,9 @@ function modalAddMember() {
       maxlength="255" 
       title="digite seu email"
       />
-    <label for="github">GitHub</label>
+    <label for="github">GitHub:</label>
     <input 
+      class="form-input"
       type="text" 
       name="github-add" 
       id="github-add" 
@@ -114,8 +118,9 @@ function modalAddMember() {
       maxlength="255" 
       title="digite seu github"
       />
-    <label for="phone">Phone</label>
+    <label for="phone">Phone:</label>
     <input 
+      class="form-input"
       type="text" 
       name="phone-add" 
       id="phone-add" 

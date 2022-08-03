@@ -289,14 +289,15 @@ section {
 .modal-content-add form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  width: -moz-available;
+  gap: 7px;
+  width: 100%;
 }
 
-/*
- * ESTILIZAR OS CAMPOS OBRIGATÓRIOS PARA ADICIONAR MEMBRO
- * ...
-*/
+form input{
+  padding: 5px;
+  height: 30px;
+  border-radius: 5px;
+}
 
 .modal-content-add div {
   height: 15%;
