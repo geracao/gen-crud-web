@@ -82,7 +82,7 @@ section {
 
 .container-header-buttons {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   max-width: 550px;
   width: 80%;
@@ -301,8 +301,14 @@ section {
 .modal-content-add form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 7px;
   width: 100%;
+}
+
+form input{
+  padding: 5px;
+  height: 30px;
+  border-radius: 5px;
 }
 
 .modal-content-add div {
