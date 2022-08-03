@@ -42,7 +42,7 @@ function insertMember(member) {
     <td>${member.email}</td>
     <td>${member.github}</td>
     <td>${member.phone}</td>
-    <td>
+    <td class="actions">
       <button id="" class='nonstyle-button' onclick="modalUpdateMember(${member.id})">
         <i class="fa-solid fa-pen"></i>
       </button>
@@ -128,7 +128,6 @@ function modalAddMember() {
       />
     <div>
       <button onclick="cancelar(event)">Cancel</button>
-      <hr />
       <button id="send-add" class="add">Adicionar</button>
     </div>
   </form>
@@ -209,7 +208,6 @@ function modalUpdateMember(id) {
     />
     <div>
       <button onclick="cancelar(event)">Cancel</button>
-      <hr />
       <button id="send-edit" class="edit">Editar</button>
     </div>
   </form>
@@ -254,7 +252,6 @@ function deleteMember(id) {
   let divDelete = document.getElementById("div-delete");
   divDelete.innerHTML = `
   <button onclick="cancelar(event)">Cancel</button>
-  <hr />
   <button onclick="deleteUser(${id})" class="delete">Delete</button>
   `;
   formDelete.appendChild(divDelete);

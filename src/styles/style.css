@@ -2,9 +2,10 @@
 :root {
   --green-500: #25aa3f;
   --green-600: #00a020;
-  /* --green-600: #08661a; */
   --red-500: #ed5041;
   --red-600: #e83030;
+  --orange-500: #ffb31a;
+  --orange-600: #e69900;
   --bg-p-100: hsl(220, 70%, 60%);
   --bg-p-200: hsl(230, 70%, 60%);
   --bg-p-300: hsl(250, 50%, 55%);
@@ -127,6 +128,19 @@ section {
   transition: all 0.1s;
   background-color: var(--green-600);
 }
+
+.edit {
+  width: 60%;
+  background: var(--orange-500);
+  border: 1px solid var(--orange-600);
+}
+
+.edit:hover {
+  transition: all 0.1s;
+  background: var(--orange-600);
+}
+
+/* buttons on container header */
 
 .container-header-buttons > form {
   position: relative;
@@ -265,16 +279,14 @@ section {
 }
 
 .modal-content-delete small {
-  color: var(--bg-p-100);
+  color: var(--orange-500);
   font-weight: 600;
 }
 
 .modal-content-delete div {
   height: 20%;
-}
+  padding: 5px;
 
-.modal-content-delete div > button:first-child:hover ~ hr {
-  bottom: 5px;
 }
 
 /* Modal Add */
@@ -290,36 +302,40 @@ section {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: -moz-available;
+  width: 100%;
 }
 
-/*
- * ESTILIZAR OS CAMPOS OBRIGATÓRIOS PARA ADICIONAR MEMBRO
- * ...
-*/
-
 .modal-content-add div {
+  padding: 10px;
   height: 15%;
 }
 
-.modal-content-add div > button:first-child:hover ~ hr {
-  bottom: 30%;
+
+/* Modal Update */
+
+.modal-content-update {
+  height: 70%;
 }
 
-@keyframes bb {
-  from {
-    border-color: var(--bg-p-100);
-    left: 38%;
-  }
-  to {
-    border-color: var(--bg-p-300);
-    left: 49%;
-  }
+.modal-content-update h1 {
+  color: var(--orange-500);
+}
+
+.modal-content-update form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.modal-content-update div {
+  padding: 10px;
+  height: 15%;
 }
 
 /* Container Body */
 .fa-trash {
-  color: #ed5041;
+  color: var(--red-500);
 }
 
 .fa-pen {
@@ -348,6 +364,14 @@ tbody tr{
 
 tbody tr:nth-child(odd){
   background-color:var(--bg-p-200);
+}
+
+td.actions {
+  text-align: start;
+}
+
+td.actions button {
+  margin-inline: 5%;
 }
 
 /* footer */
