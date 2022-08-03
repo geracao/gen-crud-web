@@ -9,6 +9,7 @@ const btnAdd = document.getElementById("btn-modal-add");
 const formDelete = document.getElementById("form-delete");
 const url = "https://localhost:7210/api/Membro";
 
+// X-button
 const cancelar = (e) => {
   e.preventDefault();
   modal.style.display = "none";
