@@ -42,11 +42,11 @@ function insertMember(member) {
     <td>${member.email}</td>
     <td>${member.github}</td>
     <td>${member.phone}</td>
-    <td>
+    <td class="actions">
       <button id="" class='nonstyle-button' onclick="modalUpdateMember(${member.id})">
         <i class="fa-solid fa-pen"></i>
       </button>
-      <button id="" btn-delete class='nonstyle-button' onclick="deleteMember(${member.id})">
+      <button id="" btn-delete class='nonstyle-button' onclick="modalDeleteMember(${member.id})">
         <i class="fa-solid fa-trash"></i>
       </button>
     </td>
@@ -81,8 +81,9 @@ function modalAddMember() {
   </button>
   <hr />
   <form id="form-add">
-    <label for="name">nome</label>
+    <label for="name">Nome</label>
     <input 
+      class="form-input"
       type="text" 
       name="name-add" 
       id="name-add" 
@@ -95,6 +96,7 @@ function modalAddMember() {
       />
     <label for="email">Email</label>
     <input 
+      class="form-input"
       type="email" 
       name="email-add" 
       id="email-add" 
@@ -106,6 +108,7 @@ function modalAddMember() {
       />
     <label for="github">GitHub</label>
     <input 
+      class="form-input"
       type="text" 
       name="github-add" 
       id="github-add" 
@@ -117,6 +120,7 @@ function modalAddMember() {
       />
     <label for="phone">Phone</label>
     <input 
+      class="form-input"
       type="text" 
       name="phone-add" 
       id="phone-add" 
@@ -128,7 +132,6 @@ function modalAddMember() {
       />
     <div>
       <button onclick="cancelar(event)">Cancel</button>
-      <hr />
       <button id="send-add" class="add">Adicionar</button>
     </div>
   </form>
@@ -163,10 +166,11 @@ function modalUpdateMember(id) {
   </button>
   <hr />
   <form>
-    <label for="name">nome</label>
+    <label for="name">Nome</label>
     <input
       type="text"
       name="name-edit"
+      placeholder="nome do membro" 
       id="name-edit"
       required
       minlength="3"
@@ -176,10 +180,11 @@ function modalUpdateMember(id) {
     />
     <label for="email">Email</label>
     <input
-      type="text"
+      type="email"
       name="email-edit"
       id="email-edit"
       required
+      placeholder="email do membro" 
       minlength="3"
       maxlength="255"
       alt="digite seu email"
@@ -192,6 +197,7 @@ function modalUpdateMember(id) {
       id="github-edit"
       required
       minlength="3"
+      placeholder="github do membro" 
       maxlength="255"
       alt="digite seu github"
       title="digite seu github"
@@ -204,12 +210,12 @@ function modalUpdateMember(id) {
       required
       minlength="3"
       maxlength="17"
+      placeholder="celular do membro" 
       alt="digite seu telefone ou celular"
       title="digite seu celular"
     />
     <div>
       <button onclick="cancelar(event)">Cancel</button>
-      <hr />
       <button id="send-edit" class="edit">Editar</button>
     </div>
   </form>
@@ -246,7 +252,7 @@ function updateMember(updatedMember, id) {
 }
 
 // DELETE
-function deleteMember(id) {
+function modalDeleteMember(id) {
   console.log("id do membro: " + id);
   modal.style.display = "flex";
   modalDelete.style.display = "flex";
@@ -254,13 +260,12 @@ function deleteMember(id) {
   let divDelete = document.getElementById("div-delete");
   divDelete.innerHTML = `
   <button onclick="cancelar(event)">Cancel</button>
-  <hr />
-  <button onclick="deleteUser(${id})" class="delete">Delete</button>
+  <button onclick="deleteMember(${id})" class="delete">Delete</button>
   `;
   formDelete.appendChild(divDelete);
 }
 
-function deleteUser(id) {
+function deleteMember(id) {
   console.log(id + " removido");
   fetch(`${url}/${id}`, {
     method: "DELETE",
