@@ -43,7 +43,7 @@ form input {
   margin-bottom: 5%;
 }
 
-.modal-content>.x-close {
+.modal-content > .x-close {
   cursor: pointer;
   border-style: none;
   width: 20px;
@@ -52,7 +52,7 @@ form input {
   transition: all 0.2s;
 }
 
-.modal-content>.x-close:hover {
+.modal-content > .x-close:hover {
   transition: all 0.1s;
   color: var(--red-600);
 }
@@ -76,7 +76,7 @@ form input {
   gap: 20px;
 }
 
-.modal-content div>button {
+.modal-content div > button {
   font-size: 1rem;
   cursor: pointer;
   font-weight: 500;
@@ -86,17 +86,16 @@ form input {
   border-radius: 10px;
 }
 
-.modal-content div>button:first-child {
+.modal-content div > button:first-child {
   background: rgb(148, 145, 145);
   color: black;
 }
 
-.modal-content div>button:first-child:hover {
+.modal-content div > button:first-child:hover {
   background-color: gray;
 }
 
-
-.modal-content div>button:first-child~hr {
+.modal-content div > button:first-child ~ hr {
   display: none;
 }
 
@@ -117,7 +116,6 @@ form input {
 .modal-content-delete div {
   height: 20%;
   padding: 5px;
-
 }
 
 /* Modal Add */
