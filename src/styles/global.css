@@ -1,0 +1,36 @@
+/* Global configs */
+:root {
+  --green-500: #25aa3f;
+  --green-600: #00a020;
+  --red-500: #ed5041;
+  --red-600: #e83030;
+  --orange-500: #ffb31a;
+  --orange-600: #e69900;
+  --bg-p-100: hsl(220, 70%, 60%);
+  --bg-p-200: hsl(230, 70%, 60%);
+  --bg-p-300: hsl(250, 50%, 55%);
+  --bg-p-500: hsl(235, 50%, 30%);
+}
+
+body {
+  background-color: var(--bg-p-500);
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+  height: 0;
+}
+
+/* header */
+header {
+  background: linear-gradient(to right, var(--bg-p-100), var(--bg-p-300));
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 50px;
+  border: 1px solid #000000;
+}
